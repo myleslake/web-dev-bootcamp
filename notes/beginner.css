@@ -1,3 +1,70 @@
 button {
     color: #124ac2;
 }
+
+/* Box properties like width and height not respected on
+inline elements. The will be respected if display is 
+inline-block */
+
+span {
+    display: inline-block;
+}
+
+/* CSS Units */
+
+/* Relative Units */
+
+/* Perentages are alwasy relative to another value. Sometimes
+it's relative to a value from the parent and sometimes it's relative to a value
+from the element itself. */
+
+/* Percentages most commonly used with width and height */
+
+section {
+    width: 800px;
+}
+
+div {
+    width: 50%; /* Relative to whatever parent element is */
+}
+
+h1 {
+    /* line-height would be 80px in this case */
+    /* not as commonly used this way */
+    font-size:  40px;
+    line-height: 200%; /* Relative to the font-size of the element */
+}
+
+/* em's are relative units. Has to do with the width/height of the uppercase
+letter M in typography. */
+
+/* With font-size, 1em equals the font-size of the parent. 2ems is twice that */
+/* With other elements, 1em is equal to the computed font-size of the element itself */
+
+h2 {
+    font-size: 2em; /* Will have twice the font-size of it's parent element */
+}
+
+h1 {
+    /* Will grow/shrink as the font-size changes */
+    /* Quite common */
+    margin: 1em; /* Will become the computed font-size of the h1 itself */
+}
+
+button {
+    /* border-radius and margin will grow/shrink as buttons parent's font-size
+    changes */
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+}
+
+/* As we nest elements further and further, em's can unexpectedly continue to grow/shrink 
+because it is relative to the parents font-size. Snowball effect. */
+/* rem's are relative units. rem stats for "root em". Instead of deriving from the parent,
+it derives from the root html element's font-size. */
+/* If root font-size is 20px, 1rem will always be 20px */
+
+h3 {
+    font-size: 3rem; /* 3 times whatever the root element's font-size is */
+}
