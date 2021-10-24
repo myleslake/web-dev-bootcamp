@@ -1,0 +1,16 @@
+img {
+    width: 30%;
+    margin: 1.6666%; /* 3 images 6 sides. 10% remaining divided by 6 */
+    /* margin: calc(10%/6); Same thing as above */
+}
+
+nav {
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    margin-left: 1.6666%;
+    padding: 1.1rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}

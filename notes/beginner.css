@@ -68,3 +68,77 @@ it derives from the root html element's font-size. */
 h3 {
     font-size: 3rem; /* 3 times whatever the root element's font-size is */
 }
+
+/* Opacity & Alpha Channel */
+/* 0 is completely transparent. 1 is not at all transparent.
+/* Alpha Channel only applies to specific property it is set */
+section {
+    /* Two ways to specify it */
+    background-color: rgba(255, 255, 255, 0.5); /* 0.5 is the alpha channel */ /* 0 to 1 */
+    background-color: #00cca0FF; /* Last two digits are transparency */ /* 00 to FF */
+}
+
+/* Opacity governs transparency of it's contents and any descendants */
+div.main {
+    opacity: 0.5; /* Anything inside div.main will inherit this */
+}
+
+/* Position */
+div.playground {
+    /* Static */
+    position: static; /* Default position */
+    /* Relative */
+    position: relative; /* Keeps element in normal document flow, but can be offset relative to itself */
+    top: 100px; /* Would shift element down 100px if position is relative */
+    /* Absolute */
+    position: absolute; /* removes from normal document flow. */
+    top: 100px; /* If nested inside an element with a position that is not static, this moves it relative to that parent */
+                /* If no positioned parent exists, it will be relative to the body (top left) */
+                /* Margin is taken into account */
+    /* Fixed */
+    position: fixed; /* Removes from normal document flow. stays in it's position as screen scrolls. */
+    top: 100px;
+
+    /* Sticky */ /* Similar to fixed */
+}
+
+/* Transitions */
+/* Sets the time it takes for something to transition */
+/* Don't set transition all as it may cause a maintenance issue when changes are made */
+div.main {
+    transition: 1s; /* Slows everything */
+    transition: background-color 1s; /* Only background color will change slowly, everything else instantly */
+    transition: 1s 1s; /* Adds a 1s delay and then a 1s transition */
+    transition-timing-function: ease-in; /* Different ways to apply transition so it's not a consistent speeds */
+    transition-timing-function: ease-out; /* Can apply timing functions in transition prop as a shorthand */
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Transform */
+/* Can specify y and x indiviually for a lot of these */
+/* Can apply all of these is one line of transform. Separate by a space */
+/* Will apply to all child elements */
+div.shifty {
+    transform: rotate(180deg); /* Rotate 180 degrees */
+    transform-origin: bottom-right; /* Changes the pivot point when transforming */
+    transform: scale(0.5); /* will be 50% of original size */
+    transform: translate(200px, 200px); /* Will move the element up 200px and to the right 200px */
+    transform: skew(10deg, 5deg); /* x & y params. Somewhat warps or 'skews' element */
+}
+
+/* Background in more detail */
+section {
+    background-image: url(img/hey-image.jpg);
+    background-size: cover; /* Shrinks down and crops off if needed */
+    background-size: contain; /* As large as possible without crop/stretch. will repeat */
+    background-position: top; 
+    background: top/cover no-repeat url(img/hey-image.jpg); /* Shorthand */
+}
+
+/* fonts.google.com */
+
+
+
+
+
+
