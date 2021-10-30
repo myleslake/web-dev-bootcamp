@@ -1,0 +1,69 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Assigned defaults */
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 500px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    /* MAIN AXIS */
+    flex-direction: row;
+        /* row, row-reverse, column, column-reverse; */
+        /* change how main axis is displayed, left to right, top to bottom, etc. */
+        /* Reverse changes content starting point as well, not just sliding to other side */
+    justify-content: center;
+        /* flex-start, flex-end, center, space-evenly, space-around, space-between */
+    flex-wrap: wrap;
+        /* wrap, wrap-reverse */
+    /* CROSS AXIS */
+    /* align-items: flex-start; */
+        /* flex-start, flex-end, center, baseline */
+        /* similar to justify-content, but for cross axis */
+        /* baseline moves boxes to align the text in them. */
+    /* align-content: space-between; */
+        /* Only works when wrap or wrap-reverse is on */   
+}
+
+#container div {
+    width: 100px;
+    height: 100px;
+    flex-basis: 100px;
+        /* sets size. goes by main axis direction */
+    /* flex-grow: 1; */
+        /* all divs will grow to fill the space. 
+        since wrap is on they will spill over and take up all of next row.
+        can use min-width and max-width to prevent too big or small */
+}
+
+/* #container div:nth-of-type(2) { */
+    /* align-self: flex-end; */
+    /* cross axis. apply to element instead of it's container */
+/* }  */
+
+#container div:nth-of-type(1) {
+    flex-grow: 1;
+    /* flex-shrink: 1; */
+        /* opposite of flex-grow when container is too small.
+        can choose one or multiple columns that will shrink relative to other
+        elements in the container */
+} 
+
+#container div:nth-of-type(5) {
+    flex-grow: 2;
+    /*flex: flex-grow | flex-shrink | flex-basis (shorthand syntax) */
+}
+
+/*  */
+@media (width: 360px) {
+    div {
+        color: red;
+    }
+}
