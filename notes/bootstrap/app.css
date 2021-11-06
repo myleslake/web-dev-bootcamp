@@ -1,0 +1,9 @@
+/* CSS Variables 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+    --primary-color: #4fef12;
+}
+
+h2 {
+    color: var(--primary-color);
+}
