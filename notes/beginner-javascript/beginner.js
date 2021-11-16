@@ -14,10 +14,10 @@ let q = msg.replace("love", "hate"); // replace part of a string
 // Similar to string interpolation in C# or f string in Python
 let mylesMsg = `Myles said ${msg}.`; // Have to use back tick charaters for the string
 
-// Undefined
+// undefined
 // Javascript doesn't know or can't find what you're talking about
 
-// Null
+// null
 // What you're asking for is found, but it has no value
 
 
@@ -28,3 +28,6 @@ Math.floor(2.999999); // Chops off the .99999 and returns 2
 Math.random(); // Returns a random number between 0 and 1, but not including 1
 
 
+let number = parseInt("34"); // Convert string to integer
+
+// Conditional logic
