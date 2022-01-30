@@ -1,7 +1,7 @@
 
 // Primitive objects: Number, string, boolean, null, undefined
 
-
+const PI = 3.14159;
 let msg = "I love cats";
 let x = msg.indexOf(cat); // returns 7 for the start of the word cat // -1 if not found
 let length = msg.length; // property returns string length
@@ -31,3 +31,32 @@ Math.random(); // Returns a random number between 0 and 1, but not including 1
 let number = parseInt("34"); // Convert string to integer
 
 // Conditional logic
+// JS will short ciruit first part of logical && and only evaluate the first part
+
+const day = 2;
+
+switch (day) {
+    case 1: 
+        console.log("Monday");
+        break;
+    case 2: 
+        console.log("Tuesday");
+        break;
+    case 3: 
+        console.log("Wednesday");
+        break;
+    case 4: 
+        console.log("Thursday");
+        break;
+    case 5: 
+        console.log("Friday");
+        break;
+    case 6: 
+        console.log("Saturday");
+        break;
+    case 7: 
+        console.log("Sunday");
+        break;
+    default:
+        break;
+}
