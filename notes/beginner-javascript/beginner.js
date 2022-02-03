@@ -27,6 +27,11 @@ Math.round(2.999); // Round to 3
 Math.floor(2.999999); // Chops off the .99999 and returns 2
 Math.random(); // Returns a random number between 0 and 1, but not including 1
 
+// ParseInt
+let myNum = parseInt("14");
+let myLetter = parseInt("A");   // Returns NaN when can't be parsed (NaN is falsey)
+
+
 
 let number = parseInt("34"); // Convert string to integer
 
