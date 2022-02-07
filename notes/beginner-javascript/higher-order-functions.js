@@ -30,3 +30,17 @@ function makeMysteryFunc() {
         }
     }
 }
+
+const mystery = makeMysteryFunc();
+mystery();
+
+// Factory Function
+// Dynamically make function and return it
+function makeBetweenFunc(min, max) {
+    return function(num) {
+        return num >= min && num <= max;
+    }
+}
+
+const betweenFunc = makeBetweenFunc(50, 100);
+betweenFunc();
