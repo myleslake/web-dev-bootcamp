@@ -35,7 +35,7 @@ const rollDie = () => (
 );
 
 // One line syntax with implicit return
-const sum = (x, y) => x + y\
+const sum = (x, y) => x + y
 
 // 'this' Keyword
 // Inside an arrow function, 'this' keyword refers to the scope
