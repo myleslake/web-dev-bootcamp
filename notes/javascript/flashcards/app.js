@@ -120,4 +120,47 @@ btnSome.addEventListener('click', () => {
 
 
 
+// function expression
+const getElement = query => document.querySelector(query);
+const getElements = query => document.querySelectorAll(query);
+
+const btnDestructure = getElement("#btnDestructure");
+const btnRest = getElement("#btnRest");
+const btnSpread = getElement("#btnSpread");
+
+// destructuring
+// unpack array into variables
+// can unpack object properties into variables in a similar way
+// using {} instead of []
+btnDestructure.addEventListener('click', () => {
+    const [first, second, ...remaining] = numbers;
+    console.log(second);
+    console.log(numbers[1]);
+    console.log(remaining)
+});
+
+function add(one, two, three, four, five) {
+    return one + two + three + four + five;
+}
+
+btnSpread.addEventListener('click', () => {
+    let result = add(...numbers);
+    console.log(result);
+});
+
+function print(first, ...nums) {
+    console.log(first);
+    for (let num of nums) {
+        console.log(num);
+    }
+}
+
+btnRest.addEventListener('click', () => {
+    print("hey", 54, 5, 18, 9)
+});
+
+
+
+
+
 
