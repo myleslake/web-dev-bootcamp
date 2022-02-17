@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Flashcards Practice</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <main>
+        <h1>Javascript Flashcards Practice</h1>
+        <section id="first" class="flashcard">
+            <h2>Section 1</h2>
+            <div id="change-title" class="hide">
+                <input id="new-title" type="text" name="new-title" value="Section 1">
+                <button id="btnChangeTitle">Update</button>
+            </div>
+            <h3>Favorite Movies</h3>
+            <ul id="movies">
+                <li>The Bourne Identity</li>
+                <li>Harry Potter</li>
+            </ul>
+            <label for="movie">Add a movie</label>
+            <input type="text" name="movie" id="movie">
+            <button id="btnAddMovie">Add</button>
+        </section>
+        <section id="second" class="flashcard">
+            <h2>Section 2</h2>
+            <input type="text" name="search" id="txtSearch">
+            <button id="btnMap">Map</button>
+            <button id="btnFilter">Filter</button>
+            <button id="btnReduce">Reduce</button>
+            <button id="btnEvery">Every</button>
+            <button id="btnSome">Some</button>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

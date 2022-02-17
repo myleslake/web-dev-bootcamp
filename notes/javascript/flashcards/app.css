@@ -1,0 +1,47 @@
+
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    border: 0.15em solid black;
+    border-radius: 0.2em;
+    padding: 0.75em;
+    background-color: #f5fcfc;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 1.25em;
+}
+
+section h2 {
+    border-bottom: 0.09em solid black;
+}
+
+input, button {
+    border: 0.15em solid black;
+    border-radius: 0.2em;
+}
+
+label, button {
+    font-weight: bold;
+}
+
+button {
+    background-color: #fff;
+    padding: 0.05em 2em ;
+}
+
+button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.hide {
+    display:none;
+}
