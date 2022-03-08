@@ -11,14 +11,14 @@ numbers.forEach(function (num) {
 });
 
 // Can pass in named function, but less common
-function print (num) {
+function print(num) {
     console.log(num * num);
 }
 numbers.forEach(print);
 
 // Newer way of doing same thing
 // More common recently
-for(let num of numbers) {
+for (let num of numbers) {
     console.log(num * num);
 }
 
@@ -28,7 +28,7 @@ for(let num of numbers) {
 // Doesn't mutate original array
 // Example: Creates a new array with each number double the
 //          value in the original array
-const doubles = numbers.map(function(num) {
+const doubles = numbers.map(function (num) {
     return num * 2;
 });
 
@@ -63,6 +63,7 @@ const id = setInterval(() => {
 clearInterval(id);
 
 // filter Method -------------------------------------------------
+// Very similar C# LINQ .Where
 // Creates a new array with all elements that pass the test 
 // implemented by the provided function
 // Callback function needs to be a boolean function
@@ -117,7 +118,7 @@ let totalPrice = prices.reduce((total, price) => total + price);
 let minPrice = prices.reduce((min, price) => {
     if (price < min) {
         return price;
-    } 
+    }
     return min;
 })
 
@@ -131,7 +132,7 @@ movies = [
 ];
 
 bestMovie = movies.reduce((highestRatedMovie, currentMovie) => {
-    if(currentMovie.rating > highestRatedMovie.rating) {
+    if (currentMovie.rating > highestRatedMovie.rating) {
         return currentMovie.rating;
     }
     return highestRatedMovie.rating;

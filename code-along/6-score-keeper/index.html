@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <!-- CDN for BULMA CSS Framework-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image 2-by-1">
+                                <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80"
+                                    alt="">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping Pong Score Keeper
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title is-1">
+                                    <span id="player-one-score">0</span> to <span id="player-two-score">0</span>
+                                </p>
+                                <p class="subtitle">
+                                    Use the buttons below to keep score.
+                                </p>
+                                <label class="label is-large is-inline" for="winning-score">Playing To</label>
+                                <div class="select is-rounded">
+                                    <select name="winning-score" id="winning-score">
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button class="button is-primary card-footer-item" id="increase-player-one">
+                                +1 Player One
+                            </button>
+                            <button class="button is-info card-footer-item" id="increase-player-two">
+                                +1 Player Two
+                            </button>
+                            <button class="button is-danger card-footer-item" id="reset">
+                                Reset
+                            </button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
