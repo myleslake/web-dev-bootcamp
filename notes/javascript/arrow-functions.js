@@ -14,11 +14,11 @@ const sum = (x, y) => {
 };
 
 // Original way of writing the same thing
-const square = function(x) {
+const square = function (x) {
     return x * x;
 };
 
-const sum = function(x, y) {
+const sum = function (x, y) {
     return x + y;
 };
 
@@ -44,18 +44,18 @@ const person = {
     firstName: 'Viggo',
     lastName: 'Mortensen',
     fullName: function () {
-        return `${this.firstName} ${this.lastName}` 
+        return `${this.firstName} ${this.lastName}`
     },
     badFullName: () => {
         return `${this.firstName} ${this.lastName}` // Error: 'this' undefined
     },
     shoutName: function () {
-        setTimeout(function() { // setTimeout is a method on Window object
+        setTimeout(function () { // setTimeout is a method on Window object
             console.log(this.fullName()) // Error: this refers to Window
         }, 3000)
     },
-    yellName: () => {           // Works
-        setTimeout(function() { // Now keyword 'this' is the same as it is
+    yellName: function () {           // Works
+        setTimeout(() => { // Now keyword 'this' is the same as it is
             console.log(this.fullName()) // for the nested function
         }, 3000)
     }
