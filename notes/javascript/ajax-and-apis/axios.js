@@ -39,7 +39,7 @@ const addNewJoke = async () => {
     jokes.append(newLi);
 };
 
-const getDadJoke = async () => {
+const getDadJoke = async () => { 
     try {
         // Don't have to pass header in separate variable, but may look cleaner
         const config = { headers: { Accept: 'application/json' } };
