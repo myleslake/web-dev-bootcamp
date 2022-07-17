@@ -1,0 +1,22 @@
+--------------
+-- Commands --
+--------------
+* pwd   - print working directory
+* ls    - list
+* cd    - change directory
+* touch - create a file
+* rm    - remove a file
+* mkdir - create a directory
+* rmdir - remove directory
+* man   - shows manual for command (man ls)
+* q     - exit manual
+
+---------------
+-- Shortcuts --
+---------------
+~ - reference the home directory in absolute paths (~/source/repos)
+/ - reference the root directory (/c)
+
+-----------
+-- Flags --
+-----------
