@@ -12,4 +12,4 @@ console.log(add(2, 2));
 // -------------------------------
 // Can require an entire directory
 // When requiring an entire directory, node looks for a file called index.js in the directory
-const pets = require('./pets')
+const pets = require('./pets');
