@@ -1,7 +1,7 @@
 {
-  "name": "figlet",
+  "name": "8-language-guesser",
   "version": "1.0.0",
-  "description": "Checking npm init",
+  "description": "Guesses language typed into console",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "Myles Lake",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.4.0",
-    "figlet": "^1.5.2"
+    "franc": "^5.0.0",
+    "langs": "^2.0.0"
   }
 }

@@ -2,6 +2,8 @@
 // in the directory that is missing a package.json
 // It gives you a console form to fill out info
 
+// Installed modules added in package.json under "dependencies"
+
 // To install a package locally to a folder or project
 // npm install {package-name} OR
 // npm i {package-name}
