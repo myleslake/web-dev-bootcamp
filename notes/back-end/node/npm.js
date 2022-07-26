@@ -16,6 +16,9 @@
 // Modules installed to node_modules
 // May need a package.json with appropriate info (the name) for it to work properly.
 
+// npm install or npm i // This will install all dependencies in the package.json
+// useful when cloning a repository
+
 
 // {
 //     "name": "jokes",

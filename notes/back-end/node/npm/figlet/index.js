@@ -5,7 +5,7 @@ const input = process.argv[2] || "Hello World!!!";
 
 figlet(input, function (err, data)  {
     if(err) {
-        console.log('Something went wrong!');
+        console.log('Something went wrong!'.red);
     }
     console.log(data.rainbow);
 });
