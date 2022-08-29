@@ -9,17 +9,18 @@
         <%= subreddit %>>
     </title>
 </head>
+<%# rand.ejs has all of the partials %>
 
-<body>
-    <%= subreddit %>
-        <h1>All the cats</h1>
-        <ul>
-            <% for(let cat of cats) { %>
-                <li>
-                    <%= cat.name %>
-                </li>
-                <% } %>
-        </ul>
-</body>
+    <body>
+        <%= subreddit %>
+            <h1>All the cats</h1>
+            <ul>
+                <% for(let cat of cats) { %>
+                    <li>
+                        <%= cat.name %>
+                    </li>
+                    <% } %>
+            </ul>
+    </body>
 
 </html>
