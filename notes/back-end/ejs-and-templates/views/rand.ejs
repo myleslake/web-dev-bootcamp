@@ -1,0 +1,9 @@
+<%- include("partials/header") %>
+    <h1>
+        Your random number is: <%= randomNumber %>
+    </h1>
+    <% if(randomNumber % 2===0) { %>
+        <h2>This is only rendered for an even number!</h2>
+        <% } %>
+
+            <%- include("partials/header") %>
