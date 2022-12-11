@@ -14,6 +14,7 @@
             <li>
                 <%= comment.comment %> - <%= comment.username %>
                 <a href="/comments/<%= comment.id %>">Details</a>
+                <a href="/comments/<%= comment.id %>/edit">Edit</a>
             </li>
         <% } %>
     </ul>
