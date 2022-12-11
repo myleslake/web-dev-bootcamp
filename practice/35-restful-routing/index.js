@@ -1,6 +1,7 @@
 // Imports
 const path = require('path');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+const { v4: uuid } = require('uuid');
 const express = require('express');
 const app = express();
 
@@ -15,12 +16,12 @@ app.set('view engine', 'ejs');                      // Set view engine for templ
 // Fake database
 let comments = [
     {
-        id: 1,
+        id: uuid(),
         username: "Todd Downing",
         comment: "I am a terrible offensive coordinator!"
     },
     {
-        id: 2,
+        id: uuid(),
         username: "Jon Robinson",
         comment: "I sure wish I didn't trade AJ Brown!"
     }
@@ -36,47 +37,55 @@ app.get("/comments", (req, res) => {
     res.render("comments/index", { comments });
 });
 
-// Show/Details - GET - Renders details about a single resource
-app.get("/comments/:id", (req, res) => {
-    const { id } = req.params;
-    const comment = comments.find(c => c.id === parseInt(id));
-    res.render("comments/details", { comment });
-});
-
-// Edit - GET - Renders a form to edit a resource
-app.get("/comments/:id/edit", (req, res) => {
-    //const id = req.params.id;
-    const { id } = req.params;
-    const comment = comments.find(c => c.id === parseInt(id));
-    res.render("comments/edit", { comment });
-});
-
-// Update - PATCH - Updates an existing resource
-app.patch("/comments/:id", (req, res) => {
-
-});
-
 // New - GET - Renders a form to create a new resource
 app.get("/comments/new", (req, res) => {
     res.render("comments/new");
 });
 
 // Create - POST - Creates a new resource
-app.get("/comments", (req, res) => {
-    res.render("comments/new");
+app.post("/comments", (req, res) => {
+    const { username, comment } = req.body;
+    const newComment = {
+        id: uuid(),
+        username: username,
+        comment: comment
+    };
+    comments.push(newComment);
+    res.redirect("comments");
 });
 
-// Post
+// Show/Details - GET - Renders details about a single resource
+app.get("/comments/:id", (req, res) => {
+    console.log("Defail");
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === id);
+    res.render("comments/details", { comment });
+});
 
+// Edit - GET - Renders a form to edit a resource
+app.get("/comments/:id/edit", (req, res) => {
+    //const id = req.params.id;                         // This does work too if you don't want to mess with destructuring from params.
+    const { id } = req.params; 
+    console.log(id);
+    const comment = comments.find(c => c.id === id);
+    res.render("comments/edit", { comment });
+});
 
-// Put
+// Update - PATCH - Updates an existing resource
+app.patch("/comments/:id", (req, res) => {
+    const { id } = req.params;
+    const foundComment = comments.find(c => c.id === id);
+    const newCommentText = req.body.comment;
+    foundComment.comment = newCommentText;
+    res.redirect("/comments");
+});
 
-
-// Patch
-
-
-// Delete
-
+// Delete - DELETE - Deletes an existing resource
+app.delete("/comments/:id", (req, res) => {
+    const { id } = req.params;
+    comments = comments.filter(c => c.id !== id);
+    res.redirect("/comments");
+});
 
 // Default - GET - NOT part of restful routing pattern
 app.get('*', (req, res) => {

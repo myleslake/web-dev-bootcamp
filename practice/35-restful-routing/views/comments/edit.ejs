@@ -9,6 +9,7 @@
 
 <body>
     <h1>Edit</h1>   
+    <h2>Id: <%= comment.id %></h2>
     <form method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
         <textarea name="comment" cols="30" rows="10">
             <%= comment.comment %>
