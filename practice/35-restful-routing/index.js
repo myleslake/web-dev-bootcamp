@@ -1,15 +1,18 @@
 // Imports
+const path = require('path');
 const express = require('express');
 const app = express();
 
+// Middleware
+app.use(express.urlencoded({extended: true }));     // To Parse form data in incoming request body
+app.use(express.json());                            // To parse json in incoming request body
 
-// Usings
-app.use(express.urlencoded({extended: true }));
-app.use(express.json());
+app.set('views', path.join(__dirname, 'views'));    // Set directory of views for our project
+app.set('view engine', 'ejs');                      // Set view engine for templating to ejs
 
 // Home
 app.get("/", (req, res) => {
-    res.send("Home Page!");
+    res.render("index");
 });
 
 // Get
@@ -33,6 +36,6 @@ app.get('*', (req, res) => {
 });
 
 // Listen
-app.listen(3000, () => {
+app.listen(3000, (error) => {
     console.log("LISTENING ON PORT 3000!");
 });
