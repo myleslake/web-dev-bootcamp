@@ -5,7 +5,7 @@ const ejsMate = require('ejs-mate');
 const methodOverride = require('method-override');
 const Campground = require('./models/campground');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
@@ -68,6 +68,6 @@ app.delete('/campgrounds/:id', async (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('Serving on port 3000')
+app.listen(5000, () => {
+    console.log('Serving on port 5000')
 })
