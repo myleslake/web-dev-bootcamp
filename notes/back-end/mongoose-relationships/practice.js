@@ -50,7 +50,7 @@ const Farm = mongoose.model("Farm", farmSchema);
 //     { name: "Okra", price: 0.99, season: "Summer" }
 // );
 
-// save farm with a product
+// save new farm with a product
 const makeFarm = async () => {
     const farm = new Farm({ name: "Myles' Farm", city: "New London, MO" });
     const watermelon = await Product.findOne({ name: "Watermelon" });
@@ -60,7 +60,18 @@ const makeFarm = async () => {
 
 //makeFarm();
 
+// add product to existing farm
 
+const addProduct = async () => {
+    const farm = await Farm.findOne({ name: "Myles' Farm" });
+    const okra = await Product.findOne({ name: "Okra" });
+    farm.products.push(okra);
+    await farm.save();
+};
+
+//addProduct();
+
+// populate method
 
 
 
