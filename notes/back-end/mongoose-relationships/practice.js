@@ -31,8 +31,8 @@ const farmSchema = new Schema({
 });
 
 // create model from schema
-const Product = new mongoose.model("Product", productSchema);
-const Farm = new mongoose.model("Farm", farmSchema);
+const Product = mongoose.model("Product", productSchema);
+const Farm = mongoose.model("Farm", farmSchema);
 
 // // create instance of model
 // const newProduct = new Product({
@@ -45,12 +45,21 @@ const Farm = new mongoose.model("Farm", farmSchema);
 // await newProduct.save();
 
 // save to db in one step
-Product.insertMany(
-    { name: "Watermelon", price: 4.99, season: "Summer" },
-    { name: "Okra", price: 0.99, season: "Summer" }
-);
+// Product.insertMany(
+//     { name: "Watermelon", price: 4.99, season: "Summer" },
+//     { name: "Okra", price: 0.99, season: "Summer" }
+// );
 
-// save 
+// save farm with a product
+const makeFarm = async () => {
+    const farm = new Farm({ name: "Myles' Farm", city: "New London, MO" });
+    const watermelon = await Product.findOne({ name: "Watermelon" });
+    farm.products.push(watermelon);
+    await farm.save();
+};
+
+//makeFarm();
+
 
 
 
