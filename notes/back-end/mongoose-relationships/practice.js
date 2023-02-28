@@ -72,6 +72,11 @@ const addProduct = async () => {
 //addProduct();
 
 // populate method
+// Mongoose doesn't do "lazy loading"
+// Need to tell it to populate the child objects with populate
+const farm = await Farm.findOne({ name: "Myles' Farm" })
+    .populate("products")
+    .then(f => console.log(f));
 
 
 
