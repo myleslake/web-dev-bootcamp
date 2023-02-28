@@ -36,14 +36,14 @@ const Tweet = mongoose.model('Tweet', tweetSchema);
 //     // const user = new User({ username: 'chickenfan99', age: 61 });
 //     const user = await User.findOne({ username: 'chickenfan99' })
 //     const tweet2 = new Tweet({ text: 'bock bock bock my chickens make noises', likes: 1239 });
-//     tweet2.user = user;
+//     tweet2.user = user; // just stores objectid, not the entire user, inside the document
 //     tweet2.save();
 // }
 
 // makeTweets();
 
 const findTweet = async () => {
-    const t = await Tweet.find({}).populate('user')
+    const t = await Tweet.find({}).populate('user', 'username') // populate the user, but only get the username, not the full user document
     console.log(t);
 }
 
