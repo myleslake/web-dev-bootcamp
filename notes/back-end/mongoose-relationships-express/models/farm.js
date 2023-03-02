@@ -35,3 +35,5 @@ const Farm = mongoose.model('Farm', farmSchema);
 
 
 module.exports = Farm;
+
+// create mongoose.model and then add to exports so we can include in other files
