@@ -4,6 +4,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 
+// whatever class we add to module.exports we can include in other files
 const Product = require('./models/product');
 const Farm = require('./models/farm')
 const categories = ['fruit', 'vegetable', 'dairy'];
