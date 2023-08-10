@@ -5,8 +5,6 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 
-
-
 mongoose.connect('mongodb://localhost:27017/loginDemo', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!");
@@ -16,6 +14,7 @@ mongoose.connect('mongodb://localhost:27017/loginDemo', { useNewUrlParser: true,
         console.log(err);
     })
 
+mongoose.connect('')
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
